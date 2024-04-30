@@ -23,6 +23,7 @@ def main () :
         st.dataframe(df.isna().sum())
 
         df.dropna(inplace=True)
+        df.reset_index(inplace=True , drop=True)
 
         st.info('Nan 이 있으면 해당 데이터는 삭제합니다.')
 
